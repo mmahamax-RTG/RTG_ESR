@@ -57,8 +57,8 @@ useEffect(() => {
   localStorage.setItem("esrRecords", JSON.stringify(records));
 }, [records]);
 
-const totalDowntime = records.reduce((sum, r) => {
-  return sum + parseFloat(r.duration || 0);
+const totalDowntime = records.reduce((sum: number, r: any) => {
+  return sum + Number(r.duration || 0);
 }, 0);
 
 // ✅ LOGIN FUNCTION LETAK SINI
