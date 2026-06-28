@@ -105,7 +105,7 @@ Details workflow from first till end:`;
     if (name === "eqId") {
       newValue = value.toUpperCase();
 
-      if (newValue && !newValue.startsWith("R")) {
+ if (newValue && !newValue.startsWith("R")) {
         newValue = "R" + newValue;
       }
     }
@@ -126,7 +126,7 @@ Details workflow from first till end:`;
   const addRecord = () => {
     let downtime = "";
 
-    if (form.start && form.end) {
+if (form.start && form.end) {
       const start = new Date(form.start);
       const end = new Date(form.end);
       const diff = (end - start) / (1000 * 60 * 60);
