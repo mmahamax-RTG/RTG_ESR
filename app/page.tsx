@@ -521,9 +521,10 @@ if (!role) {
             updated = updated.filter(name => name !== staff.name);
           }
 
+
 const selectedStaff = updated.map(name =>
-  staffData[form.team].find(s => s.name === name)
-);
+  staffData[form.team as keyof typeof staffData]?.find(s => s.name === name)
+).filter(Boolean);
 
 const groups = [
   ...new Set(
