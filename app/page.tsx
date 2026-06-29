@@ -625,7 +625,7 @@ if (!role) {
  ))}
   <h2 className="font-bold mt-6 mb-2">72hrs Repeated Dashboard</h2>
 
-<div className="w-full h-[650px] rounded-xl overflow-hidden shadow">
+<div className="w-full h-[1350px] rounded-xl overflow-hidden shadow">
   <iframe
     title="72Hrs Repeated - Tech View"
     src="https://app.powerbi.com/view?r=eyJrIjoiZjJjMDA1NDAtZjJhNi00ZTdiLTk0MGYtODhmM2E5YTk1NzdmIiwidCI6ImJmZTA2YmQ3LTdiZWUtNGQ2MS1hMzVlLWRmZmYyMzQ2ZjFjMiIsImMiOjEwfQ%3D%3D"
