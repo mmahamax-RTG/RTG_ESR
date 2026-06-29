@@ -585,7 +585,7 @@ if (!role) {
 
   <h2 className="font-bold mb-2">Records</h2>
 
-  {records.map((r, i) => (
+  {records.map((r: any, i: number) => (
     <div
       key={i}
       className={`border p-3 mb-2 rounded ${
