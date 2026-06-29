@@ -380,10 +380,21 @@ duration: downtime || "0",
 
 if (!role) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-6 rounded shadow w-80">
-        <h2 className="text-lg font-bold mb-4">Login</h2>
+    <div 
+      className="min-h-screen flex items-center justify-center relative"
+      style={{
+        backgroundImage: "url('/RTGFu.jpeg')",
+        backgroundSize: "100% 100%",   // ✅ STRETCH
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
 
+      {/* login box */}
+      <div className="relative bg-white/90 backdrop-blur p-6 rounded-xl shadow w-80">
+        <h2 className="text-lg font-bold mb-4 text-center">Login</h2>
         <input
           type="password"
           placeholder="Enter Password"
