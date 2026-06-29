@@ -25,7 +25,7 @@ BATTERY_SYSTEM: ["UPS_CONTROL", "BATTERY_CELL_MODULE", "CABLING_SYSTEM", "DRIVE_
 
 export default function ESRApp() {
 
-const [role, setRole] = useState(null);
+const [role, setRole] = useState<"manager" | "technician" | null>(null);
 const [password, setPassword] = useState("");
 
   const emptyForm = {
