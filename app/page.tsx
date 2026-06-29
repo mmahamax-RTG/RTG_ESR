@@ -153,6 +153,7 @@ const [password, setPassword] = useState("");
 
   const emptyForm = {
   eqId: "",
+  team: "",
   system: "",
   subSystem: "",
   fault: "",
