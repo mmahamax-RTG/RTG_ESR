@@ -285,7 +285,7 @@ if (!role) {
   </div>
 )}
           <h2 className="font-bold mb-2">Records</h2>
-          {records.map((r, i) => (
+          {records.map((r: any, i: number) => (
             <div key={i} className="border p-3 mb-2 rounded bg-gray-50">
               <div><b>RTG:</b> {r.rtg}</div>
               <div><b>Fault:</b> {r.fault}</div>
