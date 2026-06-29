@@ -506,7 +506,7 @@ if (!role) {
     Tick one or more technicians
   </div>
 
-  {form.team && staffData[form.team]?.map((staff, i) => (
+  {form.team && staffData[form.team as keyof typeof staffData]?.map((staff, i) => (
     <label key={i} className="block text-sm">
       <input
         type="checkbox"
