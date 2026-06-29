@@ -70,7 +70,7 @@ const totalDowntime = records.reduce((sum: number, r: any) => {
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
   const { name, value } = e.target;
 
   if (name === "system") {
