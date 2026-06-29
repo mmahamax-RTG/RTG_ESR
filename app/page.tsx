@@ -507,7 +507,7 @@ if (!role) {
   </div>
 
   {form.team && staffData[form.team as keyof typeof staffData]?.map((staff, i) => (
-    <label key={i} className="block text-sm">
+    <label key={i} className="block text-sm mb-1 flex items-center">
       <input
         type="checkbox"
         value={staff.name}
@@ -520,27 +520,29 @@ if (!role) {
           } else {
             updated = updated.filter(name => name !== staff.name);
           }
-const groups = [
-  ...new Set(
-    selectedStaff
-      .filter((s): s is { name: string; group: string } => Boolean(s))
-      .map(s => s.group)
-  )
-];
 
-const groups = [
-  ...new Set(
-    selectedStaff
-      .filter(Boolean)
-      .map(s => s.group)
-  )
-];
+          const currentTeamStaff = staffData[form.team as keyof typeof staffData] || [];
+          const selectedStaff = currentTeamStaff.filter(s => updated.includes(s.name));
 
-setForm({
-  ...form,
-  technician: updated,
-  group: groups.join(" / ")
-});
+          const groups = [
+            ...new Set(
+              selectedStaff
+                .filter((s): s is { name: string; group: string } => Boolean(s))
+                .map(s => s.group)
+            )
+          ];
+
+          setForm({
+            ...form,
+            technician: updated,
+            group: groups.join(" / ")
+          });
+        }}
+        className="mr-2"
+      />
+      <span>{staff.name}</span>
+    </label>
+  ))}
         }}
         className="mr-2"
       />
