@@ -465,14 +465,6 @@ if (!role) {
 
 {/* ✅ TAMBAH DI SINI */}
 <input
-  name="faultCode"
-  placeholder="Fault Code (e.g F005)"
-  value={form.faultCode || ""}
-  onChange={handleChange}
-  className="w-full mb-2 p-2 border rounded"
-/>
-
-<input
   name="operatorId"
   placeholder="Operator ID (e.g PTP6556)"
   value={form.operatorId || ""}
