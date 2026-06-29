@@ -623,7 +623,7 @@ if (!role) {
       )}
     </div>
  ))}
-  <h2 className="font-bold mt-6 mb-2">Dashboard</h2>
+  <h2 className="font-bold mt-6 mb-2">72hrs Repeated Dashboard</h2>
 
 <div className="w-full h-[650px] rounded-xl overflow-hidden shadow">
   <iframe
