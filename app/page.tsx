@@ -235,7 +235,7 @@ if (!role) {
 
         <select name="subSystem" value={form.subSystem} onChange={handleChange} className="w-full mb-2 p-2 border rounded">
           <option value="">Select Sub System</option>
-          {form.system && subSystemMap[form.system]?.map((sub, i) => (
+          {form.system && subSystemMap[form.system as keyof typeof subSystemMap]?.map((sub, i) => (
             <option key={i} value={sub}>{sub}</option>
           ))}
         </select>
