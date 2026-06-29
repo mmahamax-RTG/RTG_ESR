@@ -127,11 +127,11 @@ Details workflow from first till end:`;
     let downtime = "";
 
 if (form.start && form.end) {
-      const start = new Date(form.start);
-      const end = new Date(form.end);
-      const diff = (end - start) / (1000 * 60 * 60);
-      downtime = diff.toFixed(2);
-    }
+  const start = new Date(form.start);
+  const end = new Date(form.end);
+  const diff = (end.getTime() - start.getTime()) / (1000 * 60 * 60);
+  downtime = diff.toFixed(2);
+}
 
     const newRecord = {
       rtg: form.eqId || "-",
