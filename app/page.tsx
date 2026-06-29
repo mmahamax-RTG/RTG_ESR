@@ -497,8 +497,7 @@ if (!role) {
         <input type="datetime-local" name="end" value={form.end} onChange={handleChange} className="w-full mb-2 p-2 border rounded" />
 
         <div className="border p-2 rounded mb-4 max-h-40 overflow-y-auto">
-
-  <div className="text-sm mb-1 font-semibold">
+<div className="text-sm mb-1 font-semibold">
     Select Technician
   </div>
 
@@ -540,21 +539,18 @@ if (!role) {
         }}
         className="mr-2"
       />
-      <span>{staff.name}</span>
-    </label>
-  ))}
-        }}
-        className="mr-2"
-      />
-      {staff.name} ({staff.group})
+      <span>{staff.name} ({staff.group})</span>
     </label>
   ))}
 
 </div>
 
-          <button onClick={addRecord} className="bg-green-600 text-white px-4 py-2 rounded w-full mb-2">
-          {editIndex !== null ? "Update Record" : "Add Record"}
-        </button>
+<button 
+  onClick={addRecord} 
+  className="bg-green-600 text-white px-4 py-2 rounded w-full mb-2"
+>
+  {editIndex !== null ? "Update Record" : "Add Record"}
+</button>
 
 {role === "manager" && (
   <button
