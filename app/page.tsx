@@ -159,8 +159,8 @@ const [password, setPassword] = useState("");
   fault: "",
   finding: "",
   solution: "",
-  technician: [],
-  group: "", // ✅ TAMBAH DI SINI
+  technician: [] as string[],
+  group: "", 
   nature: "",
   status: "Closed",
   start: "",
@@ -256,7 +256,7 @@ if (["faultCode", "operatorId", "location"].includes(name)) {
   setForm(emptyForm);
 };
 
-// ✅ EDIT FUNCTION DI SINI
+
 const [editIndex, setEditIndex] = useState<number | null>(null);
 
 const handleEdit = (index: number) => {
@@ -292,7 +292,7 @@ const handleEdit = (index: number) => {
   setEditIndex(index);
 };
 
-// ✅ BARU addRecord
+
 const addRecord = () => {
     let downtime = "";
 
@@ -336,7 +336,7 @@ duration: downtime || "0",
 
   "Work Order No.": "",
 
-  // ✅ NEW PART
+
   "Attend By": form.group || "-",
   "Fault Code": form.faultCode || "-",
   "Operator ID": form.operatorId || "-",
@@ -353,12 +353,12 @@ duration: downtime || "0",
 } else {
   setRecords([...records, newRecord]);
 }
-    clearForm(); // auto clear after add ✅
+    clearForm();
   };
 
   const exportExcel = () => {
 
-  // ✅ BONUS SECURITY
+
   if (role !== "manager") {
     alert("Only Duty Manager can export Excel");
     return;
@@ -377,7 +377,7 @@ duration: downtime || "0",
   XLSX.utils.book_append_sheet(workbook, worksheet, "ESR");
   XLSX.writeFile(workbook, "ESR_Report.xlsx");
 };
-// ✅ ✅ LETAK LOGIN SCREEN BLOCK DI SINI
+
 if (!role) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
