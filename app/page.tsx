@@ -623,6 +623,16 @@ if (!role) {
       )}
     </div>
  ))}
+  <h2 className="font-bold mt-6 mb-2">Dashboard</h2>
+
+<div className="w-full h-[650px] rounded-xl overflow-hidden shadow">
+  <iframe
+    title="72Hrs Repeated - Tech View"
+    src="https://app.powerbi.com/view?r=eyJrIjoiZjJjMDA1NDAtZjJhNi00ZTdiLTk0MGYtODhmM2E5YTk1NzdmIiwidCI6ImJmZTA2YmQ3LTdiZWUtNGQ2MS1hMzVlLWRmZmYyMzQ2ZjFjMiIsImMiOjEwfQ%3D%3D"
+    className="w-full h-full border-0"
+    allowFullScreen
+  ></iframe>
+</div>
 <div className="fixed bottom-2 right-3 text-[15px] text-gray-400 opacity-50 hover:opacity-100 transition">
   by5533 M&R © 2026
 </div>
