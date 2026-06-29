@@ -168,7 +168,7 @@ duration: downtime || "0",
     return;
   }
 
-  const data = records.map(r => r.full);
+  const data = records.map((r: any) => r.full);
   const worksheet = XLSX.utils.json_to_sheet(data);
 
   worksheet['!cols'] = [
