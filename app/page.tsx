@@ -388,7 +388,7 @@ export default function ESRApp() {
           </button>
         </div>
 
-        {/* INPUT GRID - RESPONSIVE */}
+        {/* INPUT GRID */}
         <div className="space-y-2">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <input 
@@ -573,7 +573,23 @@ export default function ESRApp() {
 
           {/* DASHBOARD POWER BI */}
           <div className="mt-6 border-t border-gray-200 pt-4">
-            <h2 className="font-bold text-gray-800 text-sm sm:text-base mb-2">72hrs Repeated Dashboard</h2>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-2 gap-2">
+              <h2 className="font-bold text-gray-800 text-sm sm:text-base">
+                72hrs Repeated Dashboard
+              </h2>
+              
+              <div className="flex flex-wrap items-center gap-1.5 bg-blue-50 border border-blue-200 text-blue-700 p-2 rounded-md text-[11px] sm:text-xs font-medium shadow-sm w-full md:w-auto">
+                <span>ℹ️ <b>DISPLAY GUIDE (Full View Dashboard):</b> To view the dashboard in full screen, please click the </span>
+                <span className="inline-flex items-center gap-1 border border-gray-300 bg-white px-1.5 py-0.5 rounded text-gray-700 font-semibold shadow-sm text-[10px] sm:text-xs">
+                  <svg className="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8V4h4M16 4h4v4M4 16v4h4M20 16v4h-4M9 9h6v6H9z"></path>
+                  </svg>
+                  [Fit to page]
+                </span>
+                <span>button located at the bottom right corner of the Power BI control bar.</span>
+              </div>
+            </div>
+
             <div className="w-full h-[400px] sm:h-[600px] md:h-[800px] lg:h-[1050px] rounded-xl overflow-hidden shadow-lg border border-gray-300 bg-white">
               <iframe
                 title="72Hrs Repeated - Tech View"
@@ -582,12 +598,11 @@ export default function ESRApp() {
                 allowFullScreen
               ></iframe>
             </div>
-          </div>
-        </div>
-
-      </div>
+          </div> {/* DASHBOARD POWER BI END */}
+        </div> {/* LOG RECORDS VIEW END */}
+      </div> {/* WHITE BOX CONTAINER END */}
       
-      {/* CORNER WATERMARK - ANTICIPATES BG OVERLAP */}
+      {/* CORNER WATERMARK */}
       <div className="fixed bottom-2 right-3 text-[10px] sm:text-xs text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)] opacity-60 pointer-events-none select-none font-sans font-medium tracking-wide">
         by5533 M&R © 2026
       </div>
